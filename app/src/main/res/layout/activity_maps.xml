@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/confirm_address_map_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+<!-- Image View that acts as map marker notice centerInParent-->
+
+<View
+    android:id="@+id/view"
+    android:layout_width="1dp"
+    android:layout_height="1dp"
+    android:layout_centerInParent="true"/>
+
+
+<com.airbnb.lottie.LottieAnimationView
+    android:id="@+id/lottie"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_above="@+id/view"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    app:lottie_autoPlay="false"
+    app:lottie_rawRes="@raw/map_marker"
+    app:lottie_loop="false"
+    tools:ignore="MissingConstraints"
+    />
+</RelativeLayout>
